@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+:root {
+  --background-color: rgb(247, 247, 247);
+  --main-theme: white;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(247, 247, 247);
+  background-color: var(--background-color);
+  height: 100vh;
 }
 
 code {
@@ -24,7 +30,7 @@ code {
 /*Nav Bar*/
 
 nav {
-  justify-content: space-evenly;
+  justify-content: space-evenly !important;
   padding: 20px 0;
   background-color: white;
   box-shadow:0 3px 5px rgba(0, 0, 0, 0.1);
@@ -32,8 +38,8 @@ nav {
 }
 
 nav span {
-  font-weight: 700;
-  margin-right: 50px;
+  font-weight: 600;
+  font-size: 1.2em;
 }
 
 /*Search Input*/
@@ -110,4 +116,107 @@ input {
 }
 
 
+/*More Detail Section*/
+#more-detail {
+  display: none;
+  padding: 50px;
+}
 
+.country-detail img {
+  width: 50%;
+  max-width: 600px;
+  margin-right: 50px;
+  min-width: 320px;
+}
+
+.more-info {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  flex-direction: column;
+}
+
+.more-data {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.more-data > div > span {
+  margin: 5px 0;
+  opacity: .7;
+}
+
+.col1, .col2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.col1 {
+  margin-right: 100px;
+}
+
+.more-info h3 {
+  width: 100%;
+  text-align: left;
+  font-size:2.5em;
+  margin: 25px 0;
+  
+}
+
+#back-button {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  width: fit-content;
+  font-size: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.116);
+  margin: 25px 0 100px 0
+}
+
+#back-button img {
+  width: 30px;
+  margin-right: 15px;
+}
+
+
+@media screen and (max-width: 1200px){
+  .country-detail{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .country-detail img {
+    margin: 0 0 50px 0;
+  }
+  
+  .more-info h3 {
+    text-align: center;
+  }
+
+  .more-info {
+    width: 80%;
+  }
+
+  .more-data {
+    justify-content: center;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .more-data {
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+  }
+
+  .more-data > div > span, .more-data > div {
+    margin-right: 0;
+  }
+
+
+}
